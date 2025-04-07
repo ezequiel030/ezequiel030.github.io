@@ -1,0 +1,160 @@
+.calligraffitti-regular {
+    font-family: "Calligraffitti", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('equipment\ \(6\).jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Table styles */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: greenyellow;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+tr:hover td {
+    background-color: #ddd;
+}
+
+/* Search bar styles */
+#barra-busqueda {
+    width: 80%;
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 0 auto 20px auto; /* Centra la barra y agrega margen inferior */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    #barra-busqueda {
+        width: 90%; /* Aumenta el ancho relativo en pantallas pequeñas */
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    #barra-busqueda {
+        width: 95%; /* Ocupa casi todo el ancho disponible */
+        font-size: 12px; /* Reduce aún más el tamaño del texto */
+    }
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: grey;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: greenyellow;
+}
+
+.pagination .active a {
+    background-color: greenyellow;
+    font-weight: bold;
+    pointer-events: none; /* Desactiva el enlace activo */
+}
+/* Search container styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px; /* Espacio entre el input y el botón */
+    max-width: 600px; /* Limita el ancho máximo */
+}
+
+.search-container input[type="text"] {
+    flex: 1; /* Hace que el campo de texto ocupe el espacio disponible */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container input[type="button"]:hover {
+    background-color: greenyellow;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        gap: 15px;
+    }
+
+    .search-container input[type="text"],
+    .search-container input[type="button"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+}
